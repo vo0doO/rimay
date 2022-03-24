@@ -1,0 +1,18 @@
+<ul class="social-media u-unstyled js-social-media">
+    {{#if @site.facebook}}
+        <li>
+            <a class="social-media-link" title="Facebook {{@site.facebook}}" href="{{facebook_url}}" target="_blank" rel="noopener noreferrer">
+                <svg class="icon icon--facebook"><use xlink:href="#icon-facebook"></use></svg>
+                <span>Facebook</span>
+            </a>
+        </li>
+    {{/if}}
+    {{#if @site.twitter}}
+        <li>
+            <a class="social-media-link" title="Twitter {{@site.twitter}}" href="{{twitter_url}}" target="_blank" rel="noopener noreferrer">
+                <svg class="icon icon--twitter"><use xlink:href="#icon-twitter"></use></svg>
+                <span>Twitter</span>
+            </a>
+        </li>
+    {{/if}}
+</ul>

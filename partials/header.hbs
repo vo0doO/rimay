@@ -1,0 +1,39 @@
+<header class="header">
+    <div class="header-wrap u-flexColumnTop">
+        <div class="header-top u-flexCenter">
+            {{!-- logo --}}
+            <div class="logo">
+                <a href="/" class="u-block">
+                    {{#if @site.logo}}
+                        <span class="u-block logo-wrap"><img src="{{img_url @site.logo size="l"}}" alt="{{@site.title}}"/></span>
+                    {{else}}
+                        <span class="logo-text u-lineHeight1 u-fontWeightBold u-fontSize36 gradient-text gradient-text--primary">{{@site.title}}</span>
+                    {{/if}}
+                </a>
+            </div>
+
+            <div class="nav-header--right u-flexCenter">
+                {{!-- Toggle the Seaarch --}}
+                <div class="search-field js-search-open u-pointer u-fontWeightMedium u-flexCenter">
+                    <span class="u-hide-before-lg u-fontSize20" style="margin-right:5px">{{t "Search"}}</span>
+                    <svg class="icon icon--search icon--md"><use xlink:href="#icon-search"></use></svg>
+                </div>
+
+                {{!-- Toggle the menu on the Mobile --}}
+                <div class="js-toggle-menu menu-toggle u-pointer u-hide-after-lg"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+
+        <div class="header-body u-flexColumnTop justify-content-between u-flex-1">
+            <div class="header-body-wrap">
+                {{!-- Navigation Primary --}}
+                {{navigation}}
+            </div>
+
+            <div class="nav-social-media">
+                {{!-- Widget Social Media - partials/widget/social-media.hbs --}}
+                {{> "widget/social-media"}}
+            </div>
+        </div>
+    </div>
+</header>

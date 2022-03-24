@@ -1,0 +1,35 @@
+{{!< default}}
+{{!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template --}}
+
+<div class="rimay-wrap">
+    <div class="rimay-content rimay-paway">
+        <div class="rimay-paway-content">
+            {{!-- First Post Large - partials/home/home-primary-story.hbs --}}
+            {{> "home/home-primary-story"}}
+
+            {{!-- 3 Mini Post - partials/home/home-mini-story.hbs --}}
+            {{> "home/home-mini-story"}}
+        </div>
+    </div>
+</div>
+
+<div class="rimay-wrap">
+    <div class="rimay-content">
+        {{!-- Title For Home Page --}}
+        {{!-- <h2 class="rimay-home--title u-fontSize22 u-marginTop15 u-marginBottom15 u-fontWeightMedium">{{t "The Latest"}}</h2> --}}
+
+        <div class="story-feed">
+            <div class="story-feed-content">
+                {{!-- story - partials/story/story.hbs --}}
+                {{#foreach posts from="6" to="12"}} {{> "story/story"}} {{/foreach}}
+            </div>
+        </div>
+
+        {{!-- pagination --}}
+        {{pagination}}
+    </div>
+
+    {{!-- sidebar - partials/sidebar/sidebar.hbs --}}
+    {{> "sidebar/sidebar"}}
+</div>
